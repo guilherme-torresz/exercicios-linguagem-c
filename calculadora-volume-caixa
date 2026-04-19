@@ -1,0 +1,22 @@
+//Programa que calcula o volume de uma caixa retangular, considerando altura, largura e comprimento
+
+#include <stdio.h>
+
+int main()
+
+{
+    float volume,comprimento,largura,altura;
+
+    printf("\nDigite o comprimento em metros: ");
+    scanf("%f",&comprimento);
+
+    printf("\nDigite a largura em metros: ");
+    scanf("%f",&largura);
+
+    printf("\nDigite a altura em metros: ");
+    scanf("%f",&altura);
+
+    volume = comprimento * largura * altura;
+
+    printf("\nO volume do retãngulo em metros é: %.2f m³\n\n",volume);
+}
