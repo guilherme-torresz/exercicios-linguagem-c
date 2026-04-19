@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+    int horas_mensais;
+    float sal_nominal;
+    printf("Quantas horas você trabalhou no mês? ");
+    scanf("%d",&horas_mensais);//leitura e atribuição do valor à variável horas_mensais
+    printf("Qual seu salário nominal? ");
+    scanf("%f",&sal_nominal);//leitura e atribuição do valor à variável sal_nominal
+    float valor_hora = (sal_nominal/160);//cálculo do valor da hora trabalhada
+    float valor_hora_extra = (valor_hora)+(valor_hora*0.50);//cálculo do valor da hora extra
+    int horas_extras = (horas_mensais - 160);//cálculo para saber quantas horas foram trabalhadas a mais
+
+    if (horas_mensais>160)//se o funcionário trabalhou em mais de 160 horas, recebe hora extra+salário nominal
+    {
+        printf("O valor de sua hora é R$%.2f, com hora extra é R$%.2f\n",valor_hora,valor_hora_extra);
+        printf("Como vocẽ trabalhou por %d horas extras, seu salário neste mês é R$%.2f\n",horas_extras,sal_nominal+(horas_extras*valor_hora_extra));
+    }
+
+    else
+    {
+        printf("O valor de sua hora é R$%.2f\n",valor_hora);//senão, apenas o salário nominal
+        printf("Como não foram feitas horas extras, seu salário neste mês é R$%.2f\n",sal_nominal);
+    }
+}
